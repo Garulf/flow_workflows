@@ -1,4 +1,4 @@
-name: "Release-Builder"
+name: "PR-Packager"
 on:
   workflow_dispatch:
   pull_request:
