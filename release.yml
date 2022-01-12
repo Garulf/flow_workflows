@@ -48,10 +48,6 @@ jobs:
           git clone https://github.com/Garulf/flow_commands/ bin
           pip install -r ./bin/requirements.txt
           python ./bin/commands.py package -n "${{github.event.repository.name}}.zip"
-      - name: Delete previous drafts
-        uses: hugo19941994/delete-draft-releases@v0.1.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish
         uses: softprops/action-gh-release@v1
         with:
